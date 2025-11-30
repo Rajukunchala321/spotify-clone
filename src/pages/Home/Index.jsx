@@ -4,7 +4,7 @@ import './Index.css';
 const Home = () => {
   return (
     <div className="home">
-      <h1>Welcome to Spotify Clone</h1>
+      <h1>Welcome to Spotify Clone testing</h1>
       <p>Explore your favorite music</p>
     </div>
   );
