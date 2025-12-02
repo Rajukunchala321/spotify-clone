@@ -1,0 +1,39 @@
+.cards-main-container{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    width: 100%;
+}
+.cards-main-container .cards-container{
+   width: 100%;
+   display: grid;
+   grid-row: 5;
+   grid-column: 4;
+   row-gap: 48px;
+   column-gap: 48px;
+}
+.cards-main-container h3{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.cards-container .each-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+}
+.each-card-container img{
+ width: 166px;
+ height: 166px;
+ border-radius: 8px;
+}
+.each-card-container p{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: white;
+
+}

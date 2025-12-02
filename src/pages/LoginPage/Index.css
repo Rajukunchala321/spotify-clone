@@ -32,6 +32,32 @@
     font-size: 34px;
     margin-top: 16px;
     margin-bottom: 24px;
-    
+}
+.login-btn{
+    width:100%;
+    padding: 12px;
+    background-color: #1DB954;
+    color:white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    margin-bottom: 16px;
 
+}
+.input-container label{
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+form{
+    width: 100%; 
+}
+.error{
+    color:red;
 }

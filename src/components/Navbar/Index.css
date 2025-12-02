@@ -1,0 +1,25 @@
+nav .logout-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 98px;
+    height: 100svh;
+    background-color: #040306;
+    padding: 24px 8px;
+}
+.logout-container img{
+    width: 36px;
+}
+.logout-container p{
+    color: #9B9B9B;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 600;
+}
