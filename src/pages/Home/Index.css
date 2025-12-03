@@ -12,4 +12,25 @@
     flex-direction: column;
     gap:64px;
     overflow: auto;
+    width: 100%;
+}
+.loading-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+    width: 100%;;
+    height: 100svh;
+    background-color: #181818;
+}
+.loading-section img{
+    width: 150px;  
+}
+.loading-section p{
+    color: white;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    text-align: center;
 }

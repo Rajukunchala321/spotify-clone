@@ -1,21 +1,50 @@
 import React from 'react'
 import './Index.css';
 
+export type dataTypes ={
+  message:string,
+  playlists: {
+    items: Array<{
+      id:string,
+      name: string,
+    images: Array<{
+        height: number,
+        url: string,
+        width: number
+      }>,
+
+  }>
+
+}}
+
 type Props ={
-  data: object |null
+  data: dataTypes | null,
+  errorMsg: any
 }
 
-const EditorPickAndNewRelease = (data: Props) => {
-  
+const EditorPickAndNewRelease = ({ data, errorMsg }: Props) => {
+  console.log(data)
   return (
     <div className='cards-main-container'>
-      <h3>heading placeholder</h3>
+      <h3>{data?.message}</h3>
+      
+      { errorMsg?.editorPickApi ? <>
+       <div className='error-message-container'>
+        <p>{errorMsg.editorPickApi}</p>
+       </div>
+      </>:<>
       <div className='cards-container'>
-        <div className='each-card-container'>
-          <img src='' alt='' loading='lazy' />
-          <p>Telugu Romance</p>
-        </div>
-      </div>
+        {
+          data?.playlists.items.map((eachItem)=>{
+            return(
+              <a className='each-card-container' href={`playlists-details/${eachItem.id}`} key={eachItem.id}>
+              <img src={eachItem.images[0]?.url || ''} alt={eachItem.name} loading='lazy' />
+          <p>{eachItem.name}</p>
+        </a>
+            )
+          })
+        }
+      </div></> }
     </div>
   )
 }
