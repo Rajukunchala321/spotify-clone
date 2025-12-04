@@ -7,12 +7,14 @@ import Cookies from 'js-cookie';
 import logo from "../../assests/music.png";
 // Components
 import Navbar from '../../components/Navbar/Index' 
+import CategoriesCard from '../../components/SongsCategoriesCards/CategoriesCard';
 import EditorPickAndNewRelease from '../../components/SongsCategoriesCards/EditorPickAndNewRelease'
 // Custom hook to fetch home data
 import useHomeData from "../../components/CustomHooks/useHomeData";
 const Home = () => {
   
   const {loading, errors, editorPickApi, genresMoodsApi, newReleaseApi} = useHomeData();
+  console.log("newReleaseApi", newReleaseApi)
   if(loading){
     return (
       <>
@@ -41,7 +43,7 @@ const Home = () => {
       <Navbar />
       <div className='home-all-playlist-container' >
         <EditorPickAndNewRelease errorMsg = {errors} data={editorPickApi}/>
-       
+        <CategoriesCard errorMsg = {errors} data={genresMoodsApi}/>
 
       </div>
     </section>

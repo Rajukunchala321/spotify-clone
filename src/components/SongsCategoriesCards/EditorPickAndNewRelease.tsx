@@ -3,6 +3,18 @@ import './Index.css';
 
 export type dataTypes ={
   message:string,
+  categories: {
+    items:Array<{
+    id:string,
+    name:string,
+    icons: Array<{
+      url:string,
+    }>,
+  }>,
+
+  },
+  
+
   playlists: {
     items: Array<{
       id:string,
